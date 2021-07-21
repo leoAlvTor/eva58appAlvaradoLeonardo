@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listar Registros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let elec of electrodomesticos" style="border: red solid 5px">
+      <ion-grid>
+        <ion-row>
+          <ion-item>
+            <ion-label>Codigo: {{ elec.data.codigo }}</ion-label>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            <ion-label>Nombre: {{ elec.data.nombre }}</ion-label>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            <ion-label>Imagen:</ion-label>
+            <img src="{{elec.data.image}}"/>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            <ion-label>Precio Compra: {{ elec.data.precioCompra }}</ion-label>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item>
+            <ion-label>Precio Venta: {{ elec.data.precioVenta }}</ion-label>
+          </ion-item>
+        </ion-row>
+
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

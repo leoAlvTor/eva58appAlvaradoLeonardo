@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Codigo del producto:</ion-label>
+    <ion-input [(ngModel)]="electrodomestico.codigo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre del producto:</ion-label>
+    <ion-input [(ngModel)]="electrodomestico.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Imagen del producto:</ion-label>
+    <ion-input disabled="true" [(ngModel)]="electrodomestico.image"></ion-input>
+    <ion-button>
+      <input type="file" class="upload" (change)="fileUpload($event.target.files)">
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Precio Compra:</ion-label>
+    <ion-input [(ngModel)]="electrodomestico.precioCompra"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Precio Venta:</ion-label>
+    <ion-input [(ngModel)]="electrodomestico.precioVenta"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="crearRegistro()">Crear Registro</ion-button>
+
+
+
+</ion-content>
